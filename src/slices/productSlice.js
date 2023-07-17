@@ -10,7 +10,7 @@ export const fetchProducts=createAsyncThunk(
     "products/fetchProducts",
     async()=>{
         try {
-            const res=await axios.get("http://Localhost:9000/stickers");
+            const res=await axios.get("http://localhost:9000/stickers");
             return res.data;
 
         } catch (error) {
