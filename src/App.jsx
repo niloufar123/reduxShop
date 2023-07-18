@@ -1,15 +1,25 @@
 import { useState } from 'react'
+import MainLayout from './components/layouts/mainLayout'
+import { Helmet } from 'react-helmet'
+import Header from './components/Header'
+import ProductList from './components/ProductList'
 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-     <h1 className="text-3xl font-bold underline text-center mt-10">
-      Hello world!
-    </h1>
-    </div>
+    <MainLayout>
+      <Helmet>
+        <title>
+          Sticker Shop
+        </title>
+      </Helmet>
+      <div className="mx-auto max-w-6xl">
+    <Header></Header>
+    <ProductList />
+      </div>
+    </MainLayout>
   )
 }
 
